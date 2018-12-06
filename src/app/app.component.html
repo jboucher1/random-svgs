@@ -1,3 +1,14 @@
-<div fxLayout="row wrap">
-  kkk
+<div class="container">
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div *ngFor="let color of colors" fxLayout="column" fxLayoutAlign="center center" (click)="select(color)" class="color-wrapper">
+      <mat-icon [style.opacity]="color !== selected ? '0':'1'" class="selected">done</mat-icon>
+      <span class="color" [style.backgroundColor]="color"></span>
+    </div>
+  </div>
+  <div fxLayout="row wrap" [ngStyle]="style()" class="svg-wrapper" fxLayoutAlign="start center">
+    <ironman [percentage]="percentage" fxFlex="50" fxFlex.xs="100"></ironman>
+    <loading-spinner fxFlex="50" fxFlex.xs="100" [style.stroke]="selected"></loading-spinner>
+    <countdown fxFlex="50" fxFlex.xs="100" [times]="times"></countdown>
+    <percentage></percentage>
+  </div>
 </div>

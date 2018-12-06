@@ -1,0 +1,38 @@
+$color-size:45px;
+
+.container{
+    margin:0 auto;
+    max-width:1400px;
+    padding:32px;
+}
+
+.color-wrapper{
+    margin-bottom:16px;
+}
+
+.color{
+    width:$color-size;
+    height:$color-size;
+    border:solid 3px;
+    border-radius:100%;
+    margin:0px 16px;
+    display:block;
+    cursor: pointer;
+}
+
+.selected{
+    position:absolute;
+    height:auto;
+    width:auto;
+    font-size:200%;
+    font-weight:600;
+    cursor: pointer;
+}
+
+.svg-wrapper{
+    padding-top:36px;
+}
+
+#ironman{
+    margin-bottom:36px;
+}

@@ -1,0 +1,42 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.83 39.83" *ngIf="times">
+  <defs>
+    <style>
+      .days, .hours, .minutes, .seconds{
+        fill: none;
+        stroke: currentColor;
+        transition: all 0.1s ease;
+      }
+      .count, .label {
+        font-family:Sans-Serif;
+      }
+      .count {
+        font-size: 63% !important;
+      }
+      .label {
+        font-size: 37% !important;
+      }
+    </style>
+  </defs>
+  <title>countdown</title>
+  <g>
+    <path class="days" [style.strokeDasharray]="times.days_percentage +', 100'"d="M121.32,42a15.92,15.92,0,0,1,0,31.83h0a15.92,15.92,0,1,1,0-31.83" transform="translate(-103.9 -41.49)"/>
+    <text class="count" transform="translate(11.14 16.43)">{{times.days}}</text>
+    <text class="label" transform="translate(9.88 23.28)">Days</text>
+  </g>
+  <g>
+    <path class="hours" [style.strokeDasharray]="times.hours_percentage +', 100'"d="M169.32,42a15.92,15.92,0,0,1,0,31.83h0a15.92,15.92,0,1,1,0-31.83" transform="translate(-103.9 -41.49)"/>
+    <text class="count" transform="translate(59.14 16.43)">{{times.hours}}</text>
+    <text class="label" transform="translate(56.71 23.28)">Hours</text>
+  </g>
+  <g>
+    <path class="minutes" [style.strokeDasharray]="times.minutes_percentage +', 100'"d="M217.32,42a15.92,15.92,0,0,1,0,31.83h0a15.92,15.92,0,1,1,0-31.83" transform="translate(-103.9 -41.49)"/>
+    <text class="label" transform="translate(102.19 23.28)">Minutes</text>
+    <text class="count" transform="translate(107.14 16.43)">{{times.minutes}}</text>
+  </g>
+  <g>
+    <path class="seconds" [style.strokeDasharray]="times.seconds_percentage +', 100'" d="M265.32,42a15.92,15.92,0,0,1,0,31.83h0a15.92,15.92,0,1,1,0-31.83" transform="translate(-103.9 -41.49)"/>
+    <text class="label" transform="translate(149.04 23.28)">Seconds</text>
+    <text class="count" transform="translate(155.14 16.43)">{{times.seconds}}</text>
+  </g>
+</svg>
+
