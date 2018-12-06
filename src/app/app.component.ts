@@ -44,10 +44,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // interval(100).subscribe(() => {
-    //   this.setPercentage();
-    //   this.setCountdownValues();
-    // })
+    interval(100).subscribe(() => {
+      this.setPercentage();
+      this.setCountdownValues();
+    })
   }
 
   getPercentage(value, total) {
